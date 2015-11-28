@@ -21,10 +21,10 @@ int main(int argc, char *argv[]) {
     // This pin is not the first pin on the RPi GPIO header!
     // Consult https://projects.drogon.net/raspberry-pi/wiringpi/pins/
     // for more information.
-    int PIN = 0;
+    int PIN = atoi(argv[1]);
     
     // Parse the firt parameter to this command as an integer
-    int code = atoi(argv[1]);
+    int code = atoi(argv[2]);
     
     if (wiringPiSetup () == -1) return 1;
 	printf("sending code[%i]\n", code);
