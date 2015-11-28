@@ -14,10 +14,10 @@ int main(int argc, char *argv[]) {
      see https://projects.drogon.net/raspberry-pi/wiringpi/pins/
      for pin mapping of the raspberry pi GPIO connector
      */
-    int PIN = 0;
-    char* systemCode = argv[1];
-    int unitCode = atoi(argv[2]);
-    int command  = atoi(argv[3]);
+    int PIN = argv[1];
+    char* systemCode = argv[2];
+    int unitCode = atoi(argv[3]);
+    int command  = atoi(argv[4]);
     
     if (wiringPiSetup () == -1) return 1;
 	printf("sending systemCode[%s] unitCode[%i] command[%i]\n", systemCode, unitCode, command);
